@@ -26,7 +26,7 @@ public class SecurityConfig {
                     httpSecurityOAuth2LoginConfigurer.defaultSuccessUrl("/index");
                 })
                 .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/logout.done")
+                .logoutSuccessUrl("/index")
                 .deleteCookies("JSESSIONID")
                 .invalidateHttpSession(true);
         return httpSecurity.build();
