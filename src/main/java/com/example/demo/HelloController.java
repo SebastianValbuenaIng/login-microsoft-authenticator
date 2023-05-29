@@ -8,14 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
-    @GetMapping("/graph")
-    @ResponseBody
-    public String graph(
-            @RegisteredOAuth2AuthorizedClient("graph") OAuth2AuthorizedClient graphClient
-    ) {
-        return String.valueOf(graphClient);
-    }
-
     @GetMapping("/hello")
     public String hello(){
         return "Hello Paulina";
