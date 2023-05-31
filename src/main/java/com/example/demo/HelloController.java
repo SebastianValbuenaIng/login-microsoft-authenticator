@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @GetMapping("/hello")
     public String hello() {
-        OidcUser userDetails = (OidcUser)  SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        OidcUser userDetails = (OidcUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String preferredUsername = userDetails.getPreferredUsername();
         return String.format("Hello %s world", preferredUsername);
     }
